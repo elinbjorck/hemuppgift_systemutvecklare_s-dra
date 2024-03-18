@@ -19,3 +19,17 @@ GROUP BY Avdelning
 ORDER BY MedarbetarCount DESC;
 ```
 ## Imperativ programering
+
+### Python
+Jag valde att gå igenom strängen tecken för tecken och kolla om tecknet finns i ett set som skapats i förväg, gör den det returnerar jag `False`. Finns tecknet inte läggs det till i setet.  Går det att gå igenom hela strängen utan att hitta några likadana tecken returneras `True`. 
+
+```python
+def hasUniqueCharacters(textString):
+    charecterSet = set()
+    for character in textString:
+        if character in charecterSet:
+            return False
+        else:
+            charecterSet.add(character)
+    return True
+```
