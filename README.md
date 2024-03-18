@@ -20,7 +20,7 @@ ORDER BY MedarbetarCount DESC;
 ```
 ## Imperativ programering
 
-Jag hade lite olika ideér på lösningar så jag implementerade dem i några olika språk. Jag är mest bekväm i Python och Java. 
+Jag hade lite olika ideér på lösningar så jag implementerade två av dem i olika språk. Jag är mest bekväm i Python och Java. 
 
 ### Python
 Jag valde att gå igenom strängen tecken för tecken och kolla om tecknet finns i ett set som skapats i förväg, gör den det returnerar jag `False`. Finns tecknet inte läggs det till i setet.  Går det att gå igenom hela strängen utan att hitta några likadana tecken returneras `True`. 
