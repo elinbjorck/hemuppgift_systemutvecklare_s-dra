@@ -20,6 +20,8 @@ ORDER BY MedarbetarCount DESC;
 ```
 ## Imperativ programering
 
+Jag hade lite olika ideér på lösningar så jag implementerade dem i några olika språk. Jag är mest bekväm i Python och Java. 
+
 ### Python
 Jag valde att gå igenom strängen tecken för tecken och kolla om tecknet finns i ett set som skapats i förväg, gör den det returnerar jag `False`. Finns tecknet inte läggs det till i setet.  Går det att gå igenom hela strängen utan att hitta några likadana tecken returneras `True`. 
 
@@ -31,5 +33,23 @@ def hasUniqueCharacters(textString):
             return False
         else:
             charecterSet.add(character)
-    return True
+    return Trues
+```
+### .NET
+
+I denna lösnaing går jag igenom varje tecken i strängen och jämför med alla tecken som följer. Jag använder alltså nestlade for-loopar. 
+
+```c#
+
+bool HasUniqueCharacters(string text) {
+    for( int i = 0; i < text.Length; i++) {
+        for ( int j = i + 1; j < text.Length; j++) {
+            if(text[i] == text[j]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
 ```
